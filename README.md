@@ -55,28 +55,31 @@ conda activate iccviewer
 pip install -r requirements.txt
 ```
 
-3. **Build GroundingDINO and Yolov5**:
-- On LINUX
-```bash
-cd GroundingDINO
-python setup_LINUX.py build_ext --inplace
-```
+3. **Build GroundingDINO, Yolov5, Crocodino (WINDOWS & LINUX)**:
 
-- On Windows
+- If it is on windows
    - Install CUDA Toolkit
    - Install VS 2019 Compiler
-   - Run following on `X64 Native Tools Command Prompt for VS 20xx .exe`
+   - Run command on `X64 Native Tools Command Prompt for VS 20xx .exe`
 ![alt text](download.png)
 
+Build GroundingDINO
 ```bash
 cd GroundingDINO
-python setup_WIN.py build_ext --inplace
+python setup_LINUX/WIN.py build_ext --inplace
 ```
-
-- Build yolov5
+Build yolov5
 ```bash
 cd yolov5
 pip install -r requirements
+```
+
+Build Crocodino
+```bash
+cd crocodino
+pip install -r requirements.txt
+cd models/dino/ops
+python setup.py build install # use 
 ```
 
 4. **Install model weights**:
