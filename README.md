@@ -65,7 +65,8 @@ python setup_LINUX.py build_ext --inplace
 - On Windows
    - Install CUDA Toolkit
    - Install VS 2019 Compiler
-   - Build GroundingDINO
+   - Run following on `X64 Native Tools Command Prompt for VS 20xx .exe`
+![alt text](download.png)
 
 ```bash
 cd GroundingDINO

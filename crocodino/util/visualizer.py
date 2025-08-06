@@ -20,7 +20,6 @@ from matplotlib.patches import Polygon
 from pycocotools import mask as maskUtils
 from matplotlib import transforms
 
-
 def renorm(img: torch.FloatTensor, mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) \
         -> torch.FloatTensor:
     # img: tensor(3,H,W) or tensor(B,3,H,W)
@@ -127,6 +126,7 @@ class COCOVisualizer():
 
         if 'caption' in tgt:
             ax.set_title(tgt['caption'], wrap=True)
+
 
 
 def draw_coco_annotations(img_tensor, tgt, dpi=200):
