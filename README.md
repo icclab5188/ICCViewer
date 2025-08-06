@@ -82,22 +82,16 @@ cd models/dino/ops
 python setup.py build install # use 
 ```
 
-4. **Install model weights**:
-
-#### Grounding DINO
-```bash
-cd GroundingDINO/groundingdino/
-# Download pre-trained weights
-wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
-# Place the weight file in the GroundingDINO/ directory
-```
-
-#### YOLOv5
-```bash
-# YOLOv5 weights will be automatically downloaded on first run
-# Or manually download to yolov5/ directory
-wget https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt
-```
+## **Model Zoo**:
+|Model|Level|Address|
+|---|---|---|
+|GroundingDINO|Original|[groundingdino_swint_ogc.pth](https://drive.google.com/file/d/1MIu7DTZEtRrE649K1WFg4RwLn02nN-UB/view?usp=sharing)|
+||Low|[groundingdino_finetuned_misc.pth](https://drive.google.com/file/d/1ev4JdgCoW8K-a9xLCJSWd_lt-XuOxBag/view?usp=sharing)|
+||Moderate|[groundingdino_finetuned_moderate.pth](https://drive.google.com/file/d/1o-XIo4r6QCRryvd4I3miQ7wrP4U2wXCj/view?usp=sharing)|
+|CrocoDINO|Low|[crocodino_low.pth](https://drive.google.com/file/d/1e-gX0ZLt7VHZ2cOD1h329DXRycqRfmH-/view?usp=sharing)|
+||Moderate|[crocodino_moderate.pth](https://drive.google.com/file/d/1OIw3BUAiuC1jPFPOBg1H9uj0nqrU2hSy/view?usp=sharing)|
+||High|[crocodino_high.pth](https://drive.google.com/file/d/1gQo33kF1LPZOh24Ygqf6-lk0InmGmKRd/view?usp=sharing)|
+|LGTrack|-|[lgtrack_init.pt](https://drive.google.com/file/d/1wco25h5_DP80tajqkFbp2lIxq7AHtQ5m/view?usp=sharing)|
 
 ## Usage
 
