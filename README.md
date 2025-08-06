@@ -45,18 +45,44 @@ A PyQt-based image software that supports local video and USB camera, with real-
 1. **Clone the project**:
 ```bash
 git clone <repository-url>
-cd CrocDetect/ICCViewer
+cd ICCViewer
 ```
 
 2. **Install Python dependencies**:
 ```bash
+conda create -n iccviewer python=3.9
+conda activate iccviewer
 pip install -r requirements.txt
 ```
 
-3. **Install model weights**:
+3. **Build GroundingDINO and Yolov5**:
+- On LINUX
+```bash
+cd GroundingDINO
+python setup_LINUX.py build_ext --inplace
+```
+
+- On Windows
+   - Install CUDA Toolkit
+   - Install VS 2019 Compiler
+   - Build GroundingDINO
+
+```bash
+cd GroundingDINO
+python setup_WIN.py build_ext --inplace
+```
+
+- Build yolov5
+```bash
+cd yolov5
+pip install -r requirements
+```
+
+4. **Install model weights**:
 
 #### Grounding DINO
 ```bash
+cd GroundingDINO/groundingdino/
 # Download pre-trained weights
 wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 # Place the weight file in the GroundingDINO/ directory
